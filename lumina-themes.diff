@@ -1,0 +1,131 @@
+Index: x11-themes/lumina-themes/Makefile
+===================================================================
+--- x11-themes/lumina-themes/Makefile	(nonexistent)
++++ x11-themes/lumina-themes/Makefile	(working copy)
+@@ -0,0 +1,21 @@
++# Created by: Ken Moore <ken@ixsystems.com>
++# $FreeBSD$
++
++PORTNAME=	lumina-themes
++PORTVERSION=	201709071522
++CATEGORIES=	x11-themes
++
++MAINTAINER=	ken@ixsystems.com
++COMMENT=	Lumina desktop wallpapers/colors
++
++LICENSE=	BSD2CLAUSE
++
++USE_QT5=	qmake_build
++USES=	qmake
++
++USE_GITHUB=	yes
++GH_ACCOUNT=	trueos
++GH_PROJECT=	lumina-themes
++GH_TAGNAME=	439ae5c5a8d6b6f9a0933ef1b7573a58864505fc
++
++.include <bsd.port.mk>
+
+Property changes on: x11-themes/lumina-themes/Makefile
+___________________________________________________________________
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:keywords
+## -0,0 +1 ##
++FreeBSD=%H
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
+Index: x11-themes/lumina-themes/distinfo
+===================================================================
+--- x11-themes/lumina-themes/distinfo	(nonexistent)
++++ x11-themes/lumina-themes/distinfo	(working copy)
+@@ -0,0 +1,3 @@
++TIMESTAMP = 1504812933
++SHA256 (trueos-lumina-themes-201709071522-439ae5c5a8d6b6f9a0933ef1b7573a58864505fc_GH0.tar.gz) = 6bf8ea311510988961623b4a7f57fdd5bb8b86d26d4c258fa6824d9ab285ed29
++SIZE (trueos-lumina-themes-201709071522-439ae5c5a8d6b6f9a0933ef1b7573a58864505fc_GH0.tar.gz) = 187418236
+
+Property changes on: x11-themes/lumina-themes/distinfo
+___________________________________________________________________
+Added: fbsd:nokeywords
+## -0,0 +1 ##
++yes
+\ No newline at end of property
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
+Index: x11-themes/lumina-themes/pkg-descr
+===================================================================
+--- x11-themes/lumina-themes/pkg-descr	(nonexistent)
++++ x11-themes/lumina-themes/pkg-descr	(working copy)
+@@ -0,0 +1,4 @@
++Collection of high-resolution wallpapers and Qt5 color schemes 
++from the Lumina desktop project.
++
++WWW: https://github.com/trueos/lumina-themes
+
+Property changes on: x11-themes/lumina-themes/pkg-descr
+___________________________________________________________________
+Added: fbsd:nokeywords
+## -0,0 +1 ##
++yes
+\ No newline at end of property
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
+Index: x11-themes/lumina-themes/pkg-plist
+===================================================================
+--- x11-themes/lumina-themes/pkg-plist	(nonexistent)
++++ x11-themes/lumina-themes/pkg-plist	(working copy)
+@@ -0,0 +1,23 @@
++share/wallpapers/lumina-nature/bokeh.jpg
++share/wallpapers/lumina-nature/clouds.jpg
++share/wallpapers/lumina-nature/forest_lake.jpg
++share/wallpapers/lumina-nature/forest_railroad.jpg
++share/wallpapers/lumina-nature/forest_river.jpg
++share/wallpapers/lumina-nature/lemon_water.jpg
++share/wallpapers/lumina-nature/mountain_lake.jpg
++share/wallpapers/lumina-nature/mountain_range.jpg
++share/wallpapers/lumina-nature/mountain_reflections.jpg
++share/wallpapers/lumina-nature/mountain_river.jpg
++share/wallpapers/lumina-nature/mountain_sky.jpg
++share/wallpapers/lumina-nature/mountain_valley.jpg
++share/wallpapers/lumina-nature/mountain_beach.jpg
++share/wallpapers/lumina-nature/mountain_cabin.jpg
++share/wallpapers/lumina-nature/ocean_front.jpg
++share/wallpapers/lumina-nature/park_lake.jpg
++share/wallpapers/lumina-nature/rainy_sidewalk.jpg
++share/wallpapers/lumina-nature/red_leaves.jpg
++share/wallpapers/lumina-nature/ripple_reflections.jpg
++share/wallpapers/lumina-nature/snowy_cabin.jpg
++share/wallpapers/lumina-nature/snowy_mountains.jpg
++share/wallpapers/lumina-nature/wave.jpg
++share/wallpapers/lumina-nature/wood_panels.jpg
+
+Property changes on: x11-themes/lumina-themes/pkg-plist
+___________________________________________________________________
+Added: fbsd:nokeywords
+## -0,0 +1 ##
++yes
+\ No newline at end of property
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
