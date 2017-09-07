@@ -1,0 +1,121 @@
+Index: graphics/pc-pdfviewer/Makefile
+===================================================================
+--- graphics/pc-pdfviewer/Makefile	(nonexistent)
++++ graphics/pc-pdfviewer/Makefile	(working copy)
+@@ -0,0 +1,33 @@
++# Created by: Joe Maloney <jmaloney@ixsystems.com>
++# $FreeBSD$
++
++PORTNAME=	pc-pdfviewer
++PORTVERSION=	201709071544
++CATEGORIES=	graphics
++
++MAINTAINER=	jmaloney@ixsystems.com
++COMMENT=	QT5 PDF Viewer
++
++LICENSE=	BSD2CLAUSE
++
++LIB_DEPENDS=	libtrueos-ui.so:sysutils/trueos-libqt5 \
++		libpoppler-qt5.so:${PORTSDIR}/graphics/poppler-qt5
++
++WRKSRC_SUBDIR=	src-qt5
++MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
++
++CONFLICTS=      pcbsd-utils-[0-9]*
++
++MAKE_JOBS_UNSAFE=yes
++ONLY_FOR_ARCHS= amd64
++USE_LDCONFIG=   yes
++USE_QT5=        core gui network svg linguist concurrent \
++		buildtools x11extras widgets multimedia
++USES=		qmake
++
++USE_GITHUB=	yes
++GH_ACCOUNT=	trueos
++GH_PROJECT=	pc-pdfviewer
++GH_TAGNAME=	0b524f15d446dc138e2260a0928c5625dbb0acb9
++
++.include <bsd.port.mk>
+
+Property changes on: graphics/pc-pdfviewer/Makefile
+___________________________________________________________________
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:keywords
+## -0,0 +1 ##
++FreeBSD=%H
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
+Index: graphics/pc-pdfviewer/distinfo
+===================================================================
+--- graphics/pc-pdfviewer/distinfo	(nonexistent)
++++ graphics/pc-pdfviewer/distinfo	(working copy)
+@@ -0,0 +1,3 @@
++TIMESTAMP = 1504813451
++SHA256 (trueos-pc-pdfviewer-201709071544-0b524f15d446dc138e2260a0928c5625dbb0acb9_GH0.tar.gz) = fb0316d16b772b5928c1c435197020a94259572618478c895eff53d6beba627a
++SIZE (trueos-pc-pdfviewer-201709071544-0b524f15d446dc138e2260a0928c5625dbb0acb9_GH0.tar.gz) = 38773
+
+Property changes on: graphics/pc-pdfviewer/distinfo
+___________________________________________________________________
+Added: fbsd:nokeywords
+## -0,0 +1 ##
++yes
+\ No newline at end of property
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
+Index: graphics/pc-pdfviewer/pkg-descr
+===================================================================
+--- graphics/pc-pdfviewer/pkg-descr	(nonexistent)
++++ graphics/pc-pdfviewer/pkg-descr	(working copy)
+@@ -0,0 +1,3 @@
++QT5 PDF Viewer
++
++WWW: https://github.com/trueos/trueos-utils-qt5
+
+Property changes on: graphics/pc-pdfviewer/pkg-descr
+___________________________________________________________________
+Added: fbsd:nokeywords
+## -0,0 +1 ##
++yes
+\ No newline at end of property
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
+Index: graphics/pc-pdfviewer/pkg-plist
+===================================================================
+--- graphics/pc-pdfviewer/pkg-plist	(nonexistent)
++++ graphics/pc-pdfviewer/pkg-plist	(working copy)
+@@ -0,0 +1,2 @@
++bin/pc-pdfviewer
++share/applications/pc-pdfviewer.desktop
+
+Property changes on: graphics/pc-pdfviewer/pkg-plist
+___________________________________________________________________
+Added: fbsd:nokeywords
+## -0,0 +1 ##
++yes
+\ No newline at end of property
+Added: svn:eol-style
+## -0,0 +1 ##
++native
+\ No newline at end of property
+Added: svn:mime-type
+## -0,0 +1 ##
++text/plain
+\ No newline at end of property
