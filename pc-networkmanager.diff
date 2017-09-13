@@ -3,14 +3,13 @@ Index: sysutils/pc-networkmanager/Makefile
 --- sysutils/pc-networkmanager/Makefile	(nonexistent)
 +++ sysutils/pc-networkmanager/Makefile	(working copy)
 @@ -0,0 +1,34 @@
-+# Created by: Kris Moore <kris@ixsystems.com>
 +# $FreeBSD$
 +
 +PORTNAME=	pc-networkmanager
 +PORTVERSION=	201709071451
 +CATEGORIES=	sysutils
 +
-+MAINTAINER=	kris@ixsystems.com
++MAINTAINER=	jt@ixsystems.com
 +COMMENT=	TrueOS Qt based network manager
 +
 +LICENSE=	BSD2CLAUSE

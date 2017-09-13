@@ -3,14 +3,13 @@ Index: graphics/pc-pdfviewer/Makefile
 --- graphics/pc-pdfviewer/Makefile	(nonexistent)
 +++ graphics/pc-pdfviewer/Makefile	(working copy)
 @@ -0,0 +1,33 @@
-+# Created by: Joe Maloney <jmaloney@ixsystems.com>
 +# $FreeBSD$
 +
 +PORTNAME=	pc-pdfviewer
 +PORTVERSION=	201709071544
 +CATEGORIES=	graphics
 +
-+MAINTAINER=	jmaloney@ixsystems.com
++MAINTAINER=	jt@ixsystems.com
 +COMMENT=	QT5 PDF Viewer
 +
 +LICENSE=	BSD2CLAUSE

@@ -3,14 +3,13 @@ Index: net-im/gitterdone/Makefile
 --- net-im/gitterdone/Makefile	(nonexistent)
 +++ net-im/gitterdone/Makefile	(working copy)
 @@ -0,0 +1,31 @@
-+# Created by: Kris Moore <kris@ixsystems.com>
 +# $FreeBSD$
 +
 +PORTNAME=	gitterdone
 +PORTVERSION=	201709071502
 +CATEGORIES=	net-im
 +
-+MAINTAINER=	kris@ixsystems.com
++MAINTAINER=	jt@ixsystems.com
 +COMMENT=	Gitter Client based on Qt5
 +
 +LICENSE=	BSD2CLAUSE

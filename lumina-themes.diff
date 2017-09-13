@@ -3,14 +3,13 @@ Index: x11-themes/lumina-themes/Makefile
 --- x11-themes/lumina-themes/Makefile	(nonexistent)
 +++ x11-themes/lumina-themes/Makefile	(working copy)
 @@ -0,0 +1,21 @@
-+# Created by: Ken Moore <ken@ixsystems.com>
 +# $FreeBSD$
 +
 +PORTNAME=	lumina-themes
 +PORTVERSION=	201709071522
 +CATEGORIES=	x11-themes
 +
-+MAINTAINER=	ken@ixsystems.com
++MAINTAINER=	jt@ixsystems.com
 +COMMENT=	Lumina desktop wallpapers/colors
 +
 +LICENSE=	BSD2CLAUSE
