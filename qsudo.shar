@@ -1,0 +1,64 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	qsudo
+#	qsudo/distinfo
+#	qsudo/Makefile
+#	qsudo/pkg-descr
+#
+echo c - qsudo
+mkdir -p qsudo > /dev/null 2>&1
+echo x - qsudo/distinfo
+sed 's/^X//' >qsudo/distinfo << 'c5cf5203d3e54ecc5b577e536c30fcca'
+XTIMESTAMP = 1507051606
+XSHA256 (trueos-qsudo-201710031326-0650d52eab7f643d9b6caab0a1df55c6b1191829_GH0.tar.gz) = a26a3ffe8b05e65a012d36a0a7e1e5b6cfb5dec6638a12a83f229a044484750a
+XSIZE (trueos-qsudo-201710031326-0650d52eab7f643d9b6caab0a1df55c6b1191829_GH0.tar.gz) = 21208
+c5cf5203d3e54ecc5b577e536c30fcca
+echo x - qsudo/Makefile
+sed 's/^X//' >qsudo/Makefile << 'c2a0f33ed6ed7922924782b0aeee45be'
+X# $FreeBSD$
+X
+XPORTNAME=	qsudo
+XPORTVERSION=	201710031326
+XCATEGORIES=	sysutils
+X
+XMAINTAINER=	jt@ixsystems.com
+XCOMMENT=	Qt sudo front-end
+X
+XLICENSE=	BSD2CLAUSE
+X
+XRUN_DEPENDS=	${LOCALBASE}/bin/sudo:security/sudo
+X
+XWRKSRC_SUBDIR=  src-qt5
+XMAKE_ARGS=      PREFIX=${STAGEDIR}${PREFIX}
+XMAKE_JOBS_UNSAFE=yes
+XONLY_FOR_ARCHS= amd64
+XUSE_LDCONFIG=   yes
+XUSE_QT5=        core gui network svg linguist \
+X		buildtools x11extras widgets
+XUSES=           qmake shebangfix tar:xz
+XUSE_GL+=	gl
+X
+XQMAKE_ARGS=     CONFIG+="configure"
+X
+XUSE_GITHUB=	yes
+XGH_ACCOUNT=	trueos
+XGH_PROJECT=	qsudo
+XGH_TAGNAME=	0650d52eab7f643d9b6caab0a1df55c6b1191829
+X
+XPLIST_FILES=	bin/qsudo
+X
+X.include <bsd.port.mk>
+c2a0f33ed6ed7922924782b0aeee45be
+echo x - qsudo/pkg-descr
+sed 's/^X//' >qsudo/pkg-descr << '0eaf575cc5e76d521dd043236fdccde2'
+XTrueOS Qt sudo front-end
+X
+XWWW: https://github.com/trueos/qsudo
+0eaf575cc5e76d521dd043236fdccde2
+exit
+
