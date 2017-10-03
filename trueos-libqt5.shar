@@ -1,0 +1,85 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	trueos-libqt5
+#	trueos-libqt5/pkg-descr
+#	trueos-libqt5/pkg-plist
+#	trueos-libqt5/Makefile
+#	trueos-libqt5/distinfo
+#
+echo c - trueos-libqt5
+mkdir -p trueos-libqt5 > /dev/null 2>&1
+echo x - trueos-libqt5/pkg-descr
+sed 's/^X//' >trueos-libqt5/pkg-descr << '539cec58055272156bab9a9e48a1a05e'
+XTrueOS QT5 Library
+X
+XWWW: https://github.com/trueos/trueos-libqt5
+539cec58055272156bab9a9e48a1a05e
+echo x - trueos-libqt5/pkg-plist
+sed 's/^X//' >trueos-libqt5/pkg-plist << '01115943f02eac056a666605b9d900e5'
+Xinclude/trueos-DLProcess.h
+Xinclude/trueos-SingleApplication.h
+Xinclude/trueos-dialogAPsetup.h
+Xinclude/trueos-hardware.h
+Xinclude/trueos-netif.h
+Xinclude/trueos-sysFlags.h
+Xinclude/trueos-ui.h
+Xinclude/trueos-utils.h
+Xinclude/trueos-xdgfile.h
+Xinclude/trueos-xdgutils.h
+Xlib/libtrueos-ui.so
+Xlib/libtrueos-ui.so.0
+Xlib/libtrueos-ui.so.0.9
+Xlib/libtrueos-ui.so.0.9.9
+Xlib/libtrueos-utils.so
+Xlib/libtrueos-utils.so.0
+Xlib/libtrueos-utils.so.0.9
+Xlib/libtrueos-utils.so.0.9.9
+01115943f02eac056a666605b9d900e5
+echo x - trueos-libqt5/Makefile
+sed 's/^X//' >trueos-libqt5/Makefile << '3d53ccec673686fb4639809489b0d3e9'
+X# $FreeBSD$
+X
+XPORTNAME=	trueos-libqt5
+XPORTVERSION=	20171003
+XCATEGORIES=	sysutils
+X
+XMAINTAINER=	jt@ixsystems.com
+XCOMMENT=	TrueOS QT5 Library
+X
+XLICENSE=	BSD2CLAUSE
+X
+XWRKSRC_SUBDIR=  src-qt5
+XMAKE_ARGS=      PREFIX=${STAGEDIR}${PREFIX}
+X
+XMAKE_JOBS_UNSAFE=yes
+XONLY_FOR_ARCHS= amd64
+XUSE_LDCONFIG=   yes
+XUSE_QT5=        core gui network svg linguist \
+X                buildtools x11extras widgets
+XUSES=           qmake shebangfix tar:xz
+XUSE_GL+=	gl
+X
+XWRKSRC_SUBDIR=  src-qt5
+X
+XQMAKE_ARGS=     CONFIG+="configure"
+X
+XUSE_GITHUB=	yes
+XGH_ACCOUNT=	trueos
+XGH_PROJECT=	trueos-libqt5
+XGH_TAGNAME=	9e92b465d823185c9b96f2017e06f2a06b6143fa
+X
+X.include <bsd.port.mk>
+3d53ccec673686fb4639809489b0d3e9
+echo x - trueos-libqt5/distinfo
+sed 's/^X//' >trueos-libqt5/distinfo << '917c899529986a05dbffc46318fce179'
+XTIMESTAMP = 1507050999
+XSHA256 (trueos-trueos-libqt5-20171003-9e92b465d823185c9b96f2017e06f2a06b6143fa_GH0.tar.gz) = 4537f9bff50693e285419be006e356e267732f084ce102175a60d8d517f8ee73
+XSIZE (trueos-trueos-libqt5-20171003-9e92b465d823185c9b96f2017e06f2a06b6143fa_GH0.tar.gz) = 332561
+917c899529986a05dbffc46318fce179
+exit
+
