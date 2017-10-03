@@ -1,0 +1,79 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	lumina-themes
+#	lumina-themes/pkg-plist
+#	lumina-themes/pkg-descr
+#	lumina-themes/distinfo
+#	lumina-themes/Makefile
+#
+echo c - lumina-themes
+mkdir -p lumina-themes > /dev/null 2>&1
+echo x - lumina-themes/pkg-plist
+sed 's/^X//' >lumina-themes/pkg-plist << '965040c3dd6dbcae48085a5d57ffa10d'
+Xshare/wallpapers/lumina-nature/bokeh.jpg
+Xshare/wallpapers/lumina-nature/clouds.jpg
+Xshare/wallpapers/lumina-nature/forest_lake.jpg
+Xshare/wallpapers/lumina-nature/forest_railroad.jpg
+Xshare/wallpapers/lumina-nature/forest_river.jpg
+Xshare/wallpapers/lumina-nature/lemon_water.jpg
+Xshare/wallpapers/lumina-nature/mountain_lake.jpg
+Xshare/wallpapers/lumina-nature/mountain_range.jpg
+Xshare/wallpapers/lumina-nature/mountain_reflections.jpg
+Xshare/wallpapers/lumina-nature/mountain_river.jpg
+Xshare/wallpapers/lumina-nature/mountain_sky.jpg
+Xshare/wallpapers/lumina-nature/mountain_valley.jpg
+Xshare/wallpapers/lumina-nature/mountain_beach.jpg
+Xshare/wallpapers/lumina-nature/mountain_cabin.jpg
+Xshare/wallpapers/lumina-nature/ocean_front.jpg
+Xshare/wallpapers/lumina-nature/park_lake.jpg
+Xshare/wallpapers/lumina-nature/rainy_sidewalk.jpg
+Xshare/wallpapers/lumina-nature/red_leaves.jpg
+Xshare/wallpapers/lumina-nature/ripple_reflections.jpg
+Xshare/wallpapers/lumina-nature/snowy_cabin.jpg
+Xshare/wallpapers/lumina-nature/snowy_mountains.jpg
+Xshare/wallpapers/lumina-nature/wave.jpg
+Xshare/wallpapers/lumina-nature/wood_panels.jpg
+965040c3dd6dbcae48085a5d57ffa10d
+echo x - lumina-themes/pkg-descr
+sed 's/^X//' >lumina-themes/pkg-descr << '3b67b3f429be354886264bebbc881e3a'
+XCollection of high-resolution wallpapers and Qt5 color schemes 
+Xfrom the Lumina desktop project.
+X
+XWWW: https://github.com/trueos/lumina-themes
+3b67b3f429be354886264bebbc881e3a
+echo x - lumina-themes/distinfo
+sed 's/^X//' >lumina-themes/distinfo << 'a402263da2dfaa888952d160c38d2912'
+XTIMESTAMP = 1507049393
+XSHA256 (trueos-lumina-themes-201710031246-439ae5c5a8d6b6f9a0933ef1b7573a58864505fc_GH0.tar.gz) = 6bf8ea311510988961623b4a7f57fdd5bb8b86d26d4c258fa6824d9ab285ed29
+XSIZE (trueos-lumina-themes-201710031246-439ae5c5a8d6b6f9a0933ef1b7573a58864505fc_GH0.tar.gz) = 187418236
+a402263da2dfaa888952d160c38d2912
+echo x - lumina-themes/Makefile
+sed 's/^X//' >lumina-themes/Makefile << 'cb06a79efd76d6ebb0aeb68732632c14'
+X# $FreeBSD$
+X
+XPORTNAME=	lumina-themes
+XPORTVERSION=	201710031246
+XCATEGORIES=	x11-themes
+X
+XMAINTAINER=	jt@ixsystems.com
+XCOMMENT=	Lumina desktop wallpapers/colors
+X
+XLICENSE=	BSD2CLAUSE
+X
+XUSE_QT5=	qmake_build
+XUSES=	qmake
+X
+XUSE_GITHUB=	yes
+XGH_ACCOUNT=	trueos
+XGH_PROJECT=	lumina-themes
+XGH_TAGNAME=	439ae5c5a8d6b6f9a0933ef1b7573a58864505fc
+X
+X.include <bsd.port.mk>
+cb06a79efd76d6ebb0aeb68732632c14
+exit
+

@@ -1,0 +1,287 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	pcdm
+#	pcdm/pkg-install
+#	pcdm/pkg-descr
+#	pcdm/distinfo
+#	pcdm/pkg-plist
+#	pcdm/Makefile
+#
+echo c - pcdm
+mkdir -p pcdm > /dev/null 2>&1
+echo x - pcdm/pkg-install
+sed 's/^X//' >pcdm/pkg-install << 'c8cf07522fde080e2f1a9e9d19342b13'
+X#!/bin/sh
+X# Script to install preload.conf
+X
+XPREFIX=${PKG_PREFIX-/usr/local}
+X
+Xif [ "$2" != "POST-INSTALL" ] ; then
+X   exit 0
+Xfi
+X
+X# If this is during staging, we can skip for now
+Xecho $PREFIX | grep -q '/stage/'
+Xif [ $? -eq 0 ] ; then
+X   exit 0
+Xfi
+X
+Xif [ ! -e "${PREFIX}/etc/pcdm.conf" ] ; then
+X  install -m 644 ${PREFIX}/etc/pcdm.conf.dist ${PREFIX}/etc/pcdm.conf
+Xfi
+X
+Xexit 0
+c8cf07522fde080e2f1a9e9d19342b13
+echo x - pcdm/pkg-descr
+sed 's/^X//' >pcdm/pkg-descr << 'd489700e92010b9711a195a85a9daa15'
+XQT5 based display manager for FreeBSD
+X
+XWWW: https://github.com/trueos/pcdm
+d489700e92010b9711a195a85a9daa15
+echo x - pcdm/distinfo
+sed 's/^X//' >pcdm/distinfo << '1007233f19cfd9e530d4cec094a8b236'
+XTIMESTAMP = 1507049699
+XSHA256 (trueos-pcdm-201710031254-690fdbdfc9fe482514161df1cd2bd994790c8a2d_GH0.tar.gz) = 2b1983196ce351e0685d86d1a5069c0a71a60f9c620054937e678b1723504a12
+XSIZE (trueos-pcdm-201710031254-690fdbdfc9fe482514161df1cd2bd994790c8a2d_GH0.tar.gz) = 20956725
+1007233f19cfd9e530d4cec094a8b236
+echo x - pcdm/pkg-plist
+sed 's/^X//' >pcdm/pkg-plist << '7c9a6bf5dd181177bb04eb2d351722c7'
+Xbin/PCDM-session
+Xbin/pc-dmconf
+Xbin/start-pcdm-pico
+X%%ETCDIR%%.conf.dist
+Xetc/rc.d/pcdm
+Xetc/sudoers.d/pico-sudoers
+Xsbin/PCDMd
+Xshare/PCDM/i18n/PCDM_af.qm
+Xshare/PCDM/i18n/PCDM_ar.qm
+Xshare/PCDM/i18n/PCDM_az.qm
+Xshare/PCDM/i18n/PCDM_bg.qm
+Xshare/PCDM/i18n/PCDM_bn.qm
+Xshare/PCDM/i18n/PCDM_bs.qm
+Xshare/PCDM/i18n/PCDM_ca.qm
+Xshare/PCDM/i18n/PCDM_cs.qm
+Xshare/PCDM/i18n/PCDM_cy.qm
+Xshare/PCDM/i18n/PCDM_da.qm
+Xshare/PCDM/i18n/PCDM_de.qm
+Xshare/PCDM/i18n/PCDM_el.qm
+Xshare/PCDM/i18n/PCDM_en.qm
+Xshare/PCDM/i18n/PCDM_en_GB.qm
+Xshare/PCDM/i18n/PCDM_en_AU.qm
+Xshare/PCDM/i18n/PCDM_en_US.qm
+Xshare/PCDM/i18n/PCDM_en_ZA.qm
+Xshare/PCDM/i18n/PCDM_es.qm
+Xshare/PCDM/i18n/PCDM_et.qm
+Xshare/PCDM/i18n/PCDM_eu.qm
+Xshare/PCDM/i18n/PCDM_fa.qm
+Xshare/PCDM/i18n/PCDM_fi.qm
+Xshare/PCDM/i18n/PCDM_fr.qm
+Xshare/PCDM/i18n/PCDM_fr_CA.qm
+Xshare/PCDM/i18n/PCDM_fur.qm
+Xshare/PCDM/i18n/PCDM_gl.qm
+Xshare/PCDM/i18n/PCDM_he.qm
+Xshare/PCDM/i18n/PCDM_hi.qm
+Xshare/PCDM/i18n/PCDM_hr.qm
+Xshare/PCDM/i18n/PCDM_hu.qm
+Xshare/PCDM/i18n/PCDM_id.qm
+Xshare/PCDM/i18n/PCDM_is.qm
+Xshare/PCDM/i18n/PCDM_it.qm
+Xshare/PCDM/i18n/PCDM_ja.qm
+Xshare/PCDM/i18n/PCDM_ka.qm
+Xshare/PCDM/i18n/PCDM_ko.qm
+Xshare/PCDM/i18n/PCDM_lt.qm
+Xshare/PCDM/i18n/PCDM_lv.qm
+Xshare/PCDM/i18n/PCDM_mk.qm
+Xshare/PCDM/i18n/PCDM_mn.qm
+Xshare/PCDM/i18n/PCDM_ms.qm
+Xshare/PCDM/i18n/PCDM_mt.qm
+Xshare/PCDM/i18n/PCDM_nb.qm
+Xshare/PCDM/i18n/PCDM_ne.qm
+Xshare/PCDM/i18n/PCDM_nl.qm
+Xshare/PCDM/i18n/PCDM_pa.qm
+Xshare/PCDM/i18n/PCDM_pl.qm
+Xshare/PCDM/i18n/PCDM_pt.qm
+Xshare/PCDM/i18n/PCDM_pt_BR.qm
+Xshare/PCDM/i18n/PCDM_ro.qm
+Xshare/PCDM/i18n/PCDM_ru.qm
+Xshare/PCDM/i18n/PCDM_sa.qm
+Xshare/PCDM/i18n/PCDM_sk.qm
+Xshare/PCDM/i18n/PCDM_sl.qm
+Xshare/PCDM/i18n/PCDM_sr.qm
+Xshare/PCDM/i18n/PCDM_sv.qm
+Xshare/PCDM/i18n/PCDM_sw.qm
+Xshare/PCDM/i18n/PCDM_ta.qm
+Xshare/PCDM/i18n/PCDM_tg.qm
+Xshare/PCDM/i18n/PCDM_th.qm
+Xshare/PCDM/i18n/PCDM_tr.qm
+Xshare/PCDM/i18n/PCDM_uk.qm
+Xshare/PCDM/i18n/PCDM_ur.qm
+Xshare/PCDM/i18n/PCDM_uz.qm
+Xshare/PCDM/i18n/PCDM_vi.qm
+Xshare/PCDM/i18n/PCDM_zh_CN.qm
+Xshare/PCDM/i18n/PCDM_zh_HK.qm
+Xshare/PCDM/i18n/PCDM_zh_TW.qm
+Xshare/PCDM/i18n/PCDM_zu.qm
+Xshare/PCDM/pcdm-session
+Xshare/PCDM/themes/default/banner.png
+Xshare/PCDM/themes/default/default-desktop.png
+Xshare/PCDM/themes/default/default-user.png
+Xshare/PCDM/themes/default/default.theme
+Xshare/PCDM/themes/default/keyboardlayout.png
+Xshare/PCDM/themes/default/localechange.png
+Xshare/PCDM/themes/default/login-stealth.png
+Xshare/PCDM/themes/default/login.png
+Xshare/PCDM/themes/default/nextDE.png
+Xshare/PCDM/themes/default/password.png
+Xshare/PCDM/themes/default/pcdm-default-4k.jpg
+Xshare/PCDM/themes/default/previousDE.png
+Xshare/PCDM/themes/default/system.png
+Xshare/PCDM/themes/default/virtualkeyboard.png
+Xshare/PCDM/themes/dragonflybsd/default-user.png
+Xshare/PCDM/themes/dragonflybsd/dragonflybsd.theme
+Xshare/PCDM/themes/dragonflybsd/keyboardlayout.png
+Xshare/PCDM/themes/dragonflybsd/localechange.png
+Xshare/PCDM/themes/dragonflybsd/login-stealth.png
+Xshare/PCDM/themes/dragonflybsd/login.png
+Xshare/PCDM/themes/dragonflybsd/nextDE.png
+Xshare/PCDM/themes/dragonflybsd/password.png
+Xshare/PCDM/themes/dragonflybsd/pcdm-dragonflybsd-4k.jpg
+Xshare/PCDM/themes/dragonflybsd/previousDE.png
+Xshare/PCDM/themes/dragonflybsd/system.png
+Xshare/PCDM/themes/dragonflybsd/virtualkeyboard.png
+Xshare/PCDM/themes/enterprise/banner.png
+Xshare/PCDM/themes/enterprise/default-desktop.png
+Xshare/PCDM/themes/enterprise/default-user.png
+Xshare/PCDM/themes/enterprise/enterprise.theme
+Xshare/PCDM/themes/enterprise/keyboardlayout.png
+Xshare/PCDM/themes/enterprise/localechange.png
+Xshare/PCDM/themes/enterprise/login-stealth.png
+Xshare/PCDM/themes/enterprise/login.png
+Xshare/PCDM/themes/enterprise/nextDE.png
+Xshare/PCDM/themes/enterprise/password.png
+Xshare/PCDM/themes/enterprise/pcdm-enterprise-4k.jpg
+Xshare/PCDM/themes/enterprise/previousDE.png
+Xshare/PCDM/themes/enterprise/system.png
+Xshare/PCDM/themes/enterprise/virtualkeyboard.png
+Xshare/PCDM/themes/freebsd/default-desktop.png
+Xshare/PCDM/themes/freebsd/default-user.png
+Xshare/PCDM/themes/freebsd/freebsd.theme
+Xshare/PCDM/themes/freebsd/keyboardlayout.png
+Xshare/PCDM/themes/freebsd/localechange.png
+Xshare/PCDM/themes/freebsd/login-stealth.png
+Xshare/PCDM/themes/freebsd/login.png
+Xshare/PCDM/themes/freebsd/nextDE.png
+Xshare/PCDM/themes/freebsd/password.png
+Xshare/PCDM/themes/freebsd/pcdm-freebsd-4k.jpg
+Xshare/PCDM/themes/freebsd/previousDE.png
+Xshare/PCDM/themes/freebsd/system.png
+Xshare/PCDM/themes/freebsd/virtualkeyboard.png
+Xshare/PCDM/themes/hardenedbsd/default-desktop.png
+Xshare/PCDM/themes/hardenedbsd/default-user.png
+Xshare/PCDM/themes/hardenedbsd/hardenedbsd.theme
+Xshare/PCDM/themes/hardenedbsd/keyboardlayout.png
+Xshare/PCDM/themes/hardenedbsd/localechange.png
+Xshare/PCDM/themes/hardenedbsd/login-stealth.png
+Xshare/PCDM/themes/hardenedbsd/login.png
+Xshare/PCDM/themes/hardenedbsd/nextDE.png
+Xshare/PCDM/themes/hardenedbsd/password.png
+Xshare/PCDM/themes/hardenedbsd/pcdm-hardenedbsd-4k.jpg
+Xshare/PCDM/themes/hardenedbsd/previousDE.png
+Xshare/PCDM/themes/hardenedbsd/system.png
+Xshare/PCDM/themes/hardenedbsd/virtualkeyboard.png
+Xshare/PCDM/themes/netbsd/default-user.png
+Xshare/PCDM/themes/netbsd/keyboardlayout.png
+Xshare/PCDM/themes/netbsd/localechange.png
+Xshare/PCDM/themes/netbsd/login-stealth.png
+Xshare/PCDM/themes/netbsd/login.png
+Xshare/PCDM/themes/netbsd/netbsd.theme
+Xshare/PCDM/themes/netbsd/nextDE.png
+Xshare/PCDM/themes/netbsd/password.png
+Xshare/PCDM/themes/netbsd/pcdm-netbsd-4k.jpg
+Xshare/PCDM/themes/netbsd/previousDE.png
+Xshare/PCDM/themes/netbsd/system.png
+Xshare/PCDM/themes/netbsd/virtualkeyboard.png
+Xshare/PCDM/themes/openbsd/default-user.png
+Xshare/PCDM/themes/openbsd/keyboardlayout.png
+Xshare/PCDM/themes/openbsd/localechange.png
+Xshare/PCDM/themes/openbsd/login-stealth.png
+Xshare/PCDM/themes/openbsd/login.png
+Xshare/PCDM/themes/openbsd/nextDE.png
+Xshare/PCDM/themes/openbsd/openbsd.theme
+Xshare/PCDM/themes/openbsd/password.png
+Xshare/PCDM/themes/openbsd/pcdm-openbsd-4k.jpg
+Xshare/PCDM/themes/openbsd/previousDE.png
+Xshare/PCDM/themes/openbsd/system.png
+Xshare/PCDM/themes/openbsd/virtualkeyboard.png
+Xshare/PCDM/themes/trueos/banner.png
+Xshare/PCDM/themes/trueos/default-user.png
+Xshare/PCDM/themes/trueos/keyboardlayout.png
+Xshare/PCDM/themes/trueos/localechange.png
+Xshare/PCDM/themes/trueos/login-stealth.png
+Xshare/PCDM/themes/trueos/login.png
+Xshare/PCDM/themes/trueos/nextDE.png
+Xshare/PCDM/themes/trueos/password.png
+Xshare/PCDM/themes/trueos/pcdm-trueos-4k.jpg
+Xshare/PCDM/themes/trueos/previousDE.png
+Xshare/PCDM/themes/trueos/system.png
+Xshare/PCDM/themes/trueos/trueos.theme
+Xshare/PCDM/themes/trueos/virtualkeyboard.png
+Xshare/applications/pc-dmconf.desktop
+Xshare/pixmaps/pc-dmconf.png
+Xshare/xsessions/_deforaos.desktop
+Xshare/xsessions/_evilwm.desktop
+Xshare/xsessions/_fluxbox.desktop
+Xshare/xsessions/_fvwm-crystal.desktop
+Xshare/xsessions/_fvwm.desktop
+Xshare/xsessions/_gnome-classic.desktop
+Xshare/xsessions/_icewm.desktop
+Xshare/xsessions/_kde4.desktop
+Xshare/xsessions/_plex.desktop
+Xshare/xsessions/_ratpoison.desktop
+Xshare/xsessions/_spectrwm.desktop
+Xshare/xsessions/_vtwm.desktop
+Xshare/xsessions/_windowlab.desktop
+Xshare/xsessions/_windowmaker.desktop
+7c9a6bf5dd181177bb04eb2d351722c7
+echo x - pcdm/Makefile
+sed 's/^X//' >pcdm/Makefile << 'b92c1095b3abd0b1873f46f1cfa003f8'
+X# $FreeBSD$
+X
+XPORTNAME=	pcdm
+XPORTVERSION=	201710031254
+XCATEGORIES=	x11
+X
+XMAINTAINER=	jt@ixsystems.com
+XCOMMENT=	QT5 based display manager for FreeBSD
+X
+XLICENSE=	BSD2CLAUSE
+X
+XRUN_DEPENDS=    xorg-minimal>=0:x11/xorg-minimal \
+X		xhost:x11/xhost \
+X		setxkbmap:x11/setxkbmap \
+X		${LOCALBASE}/bin/qsudo:sysutils/qsudo
+X
+XWRKSRC_SUBDIR=  src-qt5
+XMAKE_ARGS=      PREFIX=${STAGEDIR}${PREFIX}
+X
+XCONFLICTS=      pcbsd-utils-qt*
+X
+XUSE_QT5=        core gui network svg multimedia imageformats \
+X		buildtools_build x11extras concurrent
+XUSES=           qmake
+XUSE_OPENRC_SUBR=pcdm
+X
+XUSE_GITHUB=	yes
+XGH_ACCOUNT=	trueos
+XGH_PROJECT=	pcdm
+XGH_TAGNAME=	690fdbdfc9fe482514161df1cd2bd994790c8a2d
+X
+X.include <bsd.port.mk>
+b92c1095b3abd0b1873f46f1cfa003f8
+exit
+

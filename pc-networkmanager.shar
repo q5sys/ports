@@ -1,0 +1,92 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	pc-networkmanager
+#	pc-networkmanager/pkg-descr
+#	pc-networkmanager/distinfo
+#	pc-networkmanager/pkg-plist
+#	pc-networkmanager/Makefile
+#
+echo c - pc-networkmanager
+mkdir -p pc-networkmanager > /dev/null 2>&1
+echo x - pc-networkmanager/pkg-descr
+sed 's/^X//' >pc-networkmanager/pkg-descr << '25817426b95c2482f6d0fbbe906e7010'
+XTrueOS Qt Network Manager
+X
+XWWW: https://github.com/trueos/pc-networkmanager
+25817426b95c2482f6d0fbbe906e7010
+echo x - pc-networkmanager/distinfo
+sed 's/^X//' >pc-networkmanager/distinfo << '6e652c5271ce64bb5c456ad3664f88fb'
+XTIMESTAMP = 1507050085
+XSHA256 (trueos-pc-networkmanager-201710031301-ae50abf3ba522a7685f275157455f6d424453bb2_GH0.tar.gz) = 911412b337efa1a0bac7337b266cf753734980e3505a1d47e4937843bb479520
+XSIZE (trueos-pc-networkmanager-201710031301-ae50abf3ba522a7685f275157455f6d424453bb2_GH0.tar.gz) = 310371
+6e652c5271ce64bb5c456ad3664f88fb
+echo x - pc-networkmanager/pkg-plist
+sed 's/^X//' >pc-networkmanager/pkg-plist << '7f6aa3f1c4badbb06fcb18505e936b3c'
+Xbin/pc-ethernetconfig
+Xbin/pc-netmanager
+Xbin/pc-nettray
+Xbin/pc-wificonfig
+Xetc/xdg/autostart/pc-nettray.desktop
+Xshare/applications/pc-netmanager.desktop
+Xshare/applications/pc-nettray.desktop
+Xshare/trueos/conf/pubdns.conf
+Xshare/trueos/pc-netmanager/umts_stick
+Xshare/trueos/pc-netmanager/pics/defaulticon.png
+Xshare/trueos/pc-netmanager/pics/info.png
+Xshare/trueos/pc-netmanager/pics/network_local_dis.png
+Xshare/trueos/pc-netmanager/pics/network_local.png
+Xshare/trueos/pc-netmanager/pics/network_wifi_dis.png
+Xshare/trueos/pc-netmanager/pics/network_wifi.png
+Xshare/trueos/pc-netmanager/pics/object-locked.png
+Xshare/trueos/pc-netmanager/pics/object-unlocked.png
+Xshare/trueos/pc-netmanager/pics/tray_local_dis.png
+Xshare/trueos/pc-netmanager/pics/tray_local.png
+Xshare/trueos/pc-netmanager/pics/tray_wifi_dis.png
+Xshare/trueos/pc-netmanager/pics/tray_wifi.png
+Xshare/trueos/pc-netmanager/pics/tray_wifi30.png
+Xshare/trueos/pc-netmanager/pics/tray_wifi60.png
+Xshare/trueos/pc-netmanager/pics/tray_wifi85.png
+7f6aa3f1c4badbb06fcb18505e936b3c
+echo x - pc-networkmanager/Makefile
+sed 's/^X//' >pc-networkmanager/Makefile << '6a95a0f512a491aefe1349b07bc324bc'
+X# $FreeBSD$
+X
+XPORTNAME=	pc-networkmanager
+XPORTVERSION=	201710031301
+XCATEGORIES=	sysutils
+X
+XMAINTAINER=	jt@ixsystems.com
+XCOMMENT=	TrueOS Qt based network manager
+X
+XLICENSE=	BSD2CLAUSE
+X
+XLIB_DEPENDS=	libtrueos-ui.so:sysutils/trueos-libqt5
+X
+XMAKE_ARGS=      PREFIX=${STAGEDIR}${PREFIX}
+X
+XCONFLICTS=      pcbsd-utils*
+X
+XMAKE_JOBS_UNSAFE=yes
+XONLY_FOR_ARCHS= amd64
+XUSE_LDCONFIG=   yes
+XUSE_QT5=        core gui network svg linguist \
+X		buildtools x11extras widgets
+XUSES=           qmake shebangfix tar:xz
+XUSE_GL+=	gl
+X
+XQMAKE_ARGS=     CONFIG+="configure"
+X
+XUSE_GITHUB=	yes
+XGH_ACCOUNT=	trueos
+XGH_PROJECT=	pc-networkmanager
+XGH_TAGNAME=	ae50abf3ba522a7685f275157455f6d424453bb2
+X
+X.include <bsd.port.mk>
+6a95a0f512a491aefe1349b07bc324bc
+exit
+

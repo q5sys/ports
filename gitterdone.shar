@@ -1,0 +1,134 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	gitterdone
+#	gitterdone/Makefile
+#	gitterdone/distinfo
+#	gitterdone/pkg-plist
+#	gitterdone/pkg-descr
+#
+echo c - gitterdone
+mkdir -p gitterdone > /dev/null 2>&1
+echo x - gitterdone/Makefile
+sed 's/^X//' >gitterdone/Makefile << '321939afd4814383804e5680fe6f6940'
+X# $FreeBSD$
+X
+XPORTNAME=	gitterdone
+XPORTVERSION=	201710031257
+XCATEGORIES=	net-im
+X
+XMAINTAINER=	jt@ixsystems.com
+XCOMMENT=	Gitter Client based on Qt5
+X
+XLICENSE=	BSD2CLAUSE
+X
+XMAKE_ARGS=      PREFIX=${STAGEDIR}${PREFIX}
+X
+XMAKE_JOBS_UNSAFE=yes
+XUSE_LDCONFIG=   yes
+XUSE_QT5=        core gui network linguist_build \
+X		buildtools_build widgets webkit svg
+XUSES=           qmake shebangfix tar:xz
+XUSE_GL+=	gl
+X
+XWRKSRC_SUBDIR=  src-qt5
+X
+XQMAKE_ARGS=     CONFIG+="configure"
+X
+XUSE_GITHUB=	yes
+XGH_ACCOUNT=	trueos
+XGH_PROJECT=	gitterdone
+XGH_TAGNAME=	23eaadb70baeffb22ab035e08fc4675907707590
+X
+X.include <bsd.port.mk>
+321939afd4814383804e5680fe6f6940
+echo x - gitterdone/distinfo
+sed 's/^X//' >gitterdone/distinfo << '7badf4b41bd97a386269907ba7a48728'
+XTIMESTAMP = 1507049879
+XSHA256 (trueos-gitterdone-201710031257-23eaadb70baeffb22ab035e08fc4675907707590_GH0.tar.gz) = 472ca49b5050bc5772dcee0ccc01b358a301ca9e3eab57238720982dbb760a23
+XSIZE (trueos-gitterdone-201710031257-23eaadb70baeffb22ab035e08fc4675907707590_GH0.tar.gz) = 37210
+7badf4b41bd97a386269907ba7a48728
+echo x - gitterdone/pkg-plist
+sed 's/^X//' >gitterdone/pkg-plist << '5a8807848cbdabd65b1e49bae84c07e6'
+Xbin/gitterdone
+Xshare/applications/gitterdone.desktop
+Xshare/gitterdone/i18n/gitterdone_af.qm
+Xshare/gitterdone/i18n/gitterdone_ar.qm
+Xshare/gitterdone/i18n/gitterdone_az.qm
+Xshare/gitterdone/i18n/gitterdone_bg.qm
+Xshare/gitterdone/i18n/gitterdone_bn.qm
+Xshare/gitterdone/i18n/gitterdone_bs.qm
+Xshare/gitterdone/i18n/gitterdone_ca.qm
+Xshare/gitterdone/i18n/gitterdone_cs.qm
+Xshare/gitterdone/i18n/gitterdone_cy.qm
+Xshare/gitterdone/i18n/gitterdone_da.qm
+Xshare/gitterdone/i18n/gitterdone_de.qm
+Xshare/gitterdone/i18n/gitterdone_el.qm
+Xshare/gitterdone/i18n/gitterdone_en_GB.qm
+Xshare/gitterdone/i18n/gitterdone_en_ZA.qm
+Xshare/gitterdone/i18n/gitterdone_es.qm
+Xshare/gitterdone/i18n/gitterdone_et.qm
+Xshare/gitterdone/i18n/gitterdone_eu.qm
+Xshare/gitterdone/i18n/gitterdone_fa.qm
+Xshare/gitterdone/i18n/gitterdone_fi.qm
+Xshare/gitterdone/i18n/gitterdone_fr.qm
+Xshare/gitterdone/i18n/gitterdone_fr_CA.qm
+Xshare/gitterdone/i18n/gitterdone_fur.qm
+Xshare/gitterdone/i18n/gitterdone_gl.qm
+Xshare/gitterdone/i18n/gitterdone_he.qm
+Xshare/gitterdone/i18n/gitterdone_hi.qm
+Xshare/gitterdone/i18n/gitterdone_hr.qm
+Xshare/gitterdone/i18n/gitterdone_hu.qm
+Xshare/gitterdone/i18n/gitterdone_id.qm
+Xshare/gitterdone/i18n/gitterdone_is.qm
+Xshare/gitterdone/i18n/gitterdone_it.qm
+Xshare/gitterdone/i18n/gitterdone_ja.qm
+Xshare/gitterdone/i18n/gitterdone_ka.qm
+Xshare/gitterdone/i18n/gitterdone_ko.qm
+Xshare/gitterdone/i18n/gitterdone_lt.qm
+Xshare/gitterdone/i18n/gitterdone_lv.qm
+Xshare/gitterdone/i18n/gitterdone_mk.qm
+Xshare/gitterdone/i18n/gitterdone_mn.qm
+Xshare/gitterdone/i18n/gitterdone_ms.qm
+Xshare/gitterdone/i18n/gitterdone_mt.qm
+Xshare/gitterdone/i18n/gitterdone_nb.qm
+Xshare/gitterdone/i18n/gitterdone_ne.qm
+Xshare/gitterdone/i18n/gitterdone_nl.qm
+Xshare/gitterdone/i18n/gitterdone_pa.qm
+Xshare/gitterdone/i18n/gitterdone_pl.qm
+Xshare/gitterdone/i18n/gitterdone_pt.qm
+Xshare/gitterdone/i18n/gitterdone_pt_BR.qm
+Xshare/gitterdone/i18n/gitterdone_ro.qm
+Xshare/gitterdone/i18n/gitterdone_ru.qm
+Xshare/gitterdone/i18n/gitterdone_sa.qm
+Xshare/gitterdone/i18n/gitterdone_sk.qm
+Xshare/gitterdone/i18n/gitterdone_sl.qm
+Xshare/gitterdone/i18n/gitterdone_sr.qm
+Xshare/gitterdone/i18n/gitterdone_sv.qm
+Xshare/gitterdone/i18n/gitterdone_sw.qm
+Xshare/gitterdone/i18n/gitterdone_ta.qm
+Xshare/gitterdone/i18n/gitterdone_tg.qm
+Xshare/gitterdone/i18n/gitterdone_th.qm
+Xshare/gitterdone/i18n/gitterdone_tr.qm
+Xshare/gitterdone/i18n/gitterdone_uk.qm
+Xshare/gitterdone/i18n/gitterdone_ur.qm
+Xshare/gitterdone/i18n/gitterdone_uz.qm
+Xshare/gitterdone/i18n/gitterdone_vi.qm
+Xshare/gitterdone/i18n/gitterdone_zh_CN.qm
+Xshare/gitterdone/i18n/gitterdone_zh_HK.qm
+Xshare/gitterdone/i18n/gitterdone_zh_TW.qm
+Xshare/gitterdone/i18n/gitterdone_zu.qm
+Xshare/pixmaps/gitterdone.png
+5a8807848cbdabd65b1e49bae84c07e6
+echo x - gitterdone/pkg-descr
+sed 's/^X//' >gitterdone/pkg-descr << '1cc58e46657d2dc0a82871c9d93b5d2d'
+XGitterDone: A Qt5 front-end to the "Gitter" communications system
+X
+XWWW: https://github.com/trueos/gitterdone
+1cc58e46657d2dc0a82871c9d93b5d2d
+exit
+
